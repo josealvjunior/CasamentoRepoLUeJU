@@ -85,7 +85,7 @@
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Seu email..." required="required">
                             </div>
 							<div class="form-group">
-								<input type="submit" name="submit" class="btn default-btn btn-block" value="Estou participando">
+								<input type="submit" name="submit" class="btn default-btn btn-block" value="Confirmar">
 							</div>
 						</div>
 						<div class="col-sm-12">
