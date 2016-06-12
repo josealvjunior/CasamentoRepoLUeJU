@@ -45,7 +45,7 @@
 	 								<h5>Padrinhos<small>da Lu</small></h5>
 	 								<p>Da mesma forma que as meninas são meus amigos que tem acompanhado nossa trajetória.
 										Da esquerda para direita, de cima para baixo, são eles: Douglas, Washington, Cláudio,
-										Edilson, Adilon, Marcus.
+										Edilson, Adilon e Adriano.
 	 								</p>
 								</div>
  							</div>
@@ -60,7 +60,7 @@
 	 								<h5>Madrinhas<small>do Ju</small></h5>
 	 								<p>As minhas madrinhas são pessoas que nos acompanharam, pessoas que vivenciam nosso relacionamento.
 										Da esquerda para direita, de cima para baixo, são elas: Natália, Patrícia, Renata,
-										Vivian, Neide, Adriana.
+										Vivian, Neide e Adriana.
 	 								</p>
 	 							</div> 								
  							</div>
@@ -86,7 +86,7 @@
 	 								<p>Assim como as meninas, são pessoas que acompanham nossa relação, pessoas que
 										sei que posso contar em qualquer momento e que vão estar ao nosso lado sempre.
 										Da esquerda para direita, de cima para baixo, são eles: Bismarck, Fábio, Aderbal,
-										Marcelo, Junio, Alexandre.
+										Marcelo, Junio e Alexandre.
 	 								</p>
 	 							</div>
  							</div>
