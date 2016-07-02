@@ -59,21 +59,21 @@
 			</div>
 			<div class="col-sm-9">
 				<div class="contact-block">
-					<h5>Confirme sua presença</h5>
+					<h5>Confirmação de presença</h5>
                     <?php echo validation_errors(); ?>
 					<?php echo form_open('rsvp/inserir', 'id="form-rsvp"'); ?>
 					<!--<form class="contact_form" role="form" action="#"> -->
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Seu nome..." required="required">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome e sobrenome" required="required">
 							</div>
 							<div class="form-group">
-								<input type="number" class="form-control" id="numpessoas" name="numpessoas" placeholder="Contando com você, quantas pessoas irão?" required="required" max="20" min="1" >
+								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados confirmados." required="required" max="20" min="1" >
 							</div>
 							<div class="form-group">
 								<select name="eventAttending" required="required" id="eventAttending" tabindex="1">
-									<option value="">Qual ocasiação irei</option>
+									<option value="">Qual ocasiação irei(iremos)</option>
 									<option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
 									<option value="Cerimônia religiosa">Cerimônia Religiosa</option>
 								</select>

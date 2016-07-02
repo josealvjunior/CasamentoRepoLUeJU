@@ -12,7 +12,7 @@ class Rsvp extends CI_Controller {
 
         /* Define as regras para valida��o */
         $this->form_validation->set_rules('name', 'name', 'required|max_length[100]');
-        $this->form_validation->set_rules('numpessoas', 'numpessoas', 'required','integer','min_length[1]','|max_length[20]');
+        $this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
         $this->form_validation->set_rules('eventAttending', 'eventAttending','required');
         $this->form_validation->set_rules('email', 'email');
 
@@ -28,6 +28,7 @@ class Rsvp extends CI_Controller {
             $data['numpessoas'] = $this->input->post('numpessoas');
             $data['eventAttending'] = $this->input->post('eventAttending');
             $data['email'] = $this->input->post('email');
+            $data['data_criacao'] = date("Y-m-d");
 
             $this->load->library('email'); // load email library
             $this->email->from('lueju.alves@gmail.com', 'Luana & Juninho');
@@ -47,7 +48,7 @@ class Rsvp extends CI_Controller {
             $this->email->message
             (
                 'Ola '. $data['name'].'! Tudo bem?<br />
-                <p>Muito obrigado por confirmar a presença de '. $data['numpessoas'].' pessoas (incluindo você) em nosso casamento!<br /> 
+                <p>Muito obrigado por confirmar a presença de '. $data['numpessoas'].' em nosso casamento!<br /> 
                 Não se esqueça da data e horário:<br />
                 A cerimônia será dia 13/08/2016 as 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
                 Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
