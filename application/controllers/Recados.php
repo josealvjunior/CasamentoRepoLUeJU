@@ -40,6 +40,7 @@ class Recados extends CI_Controller {
             $data['nome'] = $this->input->post('name');
             $data['email'] = $this->input->post('email');
             $data['recado'] = $this->input->post('message');
+            $data['data_criacao'] = date("Y-m-d");
             //inserir data atual tamb�m....
 
             //enviar email de aviso//
@@ -53,6 +54,20 @@ class Recados extends CI_Controller {
                 '" '.$data['recado'].' " '.'</p>'
             );
             $this->email->send();
+
+            if(!empty($data['email'])){
+                //enviar email de resposta//
+                $this->load->library('email'); // load email library
+                $this->email->from('lueju.alves@gmail.com', 'Luana & Juninho');
+                $this->email->to($data['email']);
+                $this->email->subject('Recado Casmento Lu & Ju');
+                $this->email->message(
+                    'Oi '.$data['nome'].', tudo bem? '.
+                    '<br />Lemos seu recado em nosso site. Muito obrigado pelo carinho e por ter nos escrito uma mensagem.<br />'.
+                    'Abraços da Lu & do Ju.'.'</p>'
+                );
+                $this->email->send();
+            }
 
 
             /* Chama a fun��o inserir do modelo */
