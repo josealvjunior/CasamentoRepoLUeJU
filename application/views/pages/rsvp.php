@@ -69,10 +69,10 @@
 								<input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome e sobrenome" required="required">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados confirmados." required="required" max="20" min="1" >
+								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados confirmados.">
 							</div>
 							<div class="form-group">
-								<select name="eventAttending" required="required" id="eventAttending" tabindex="1">
+								<select name="eventAttending" id="eventAttending" tabindex="1" required="required">
 									<option value="">Qual ocasiação irei(iremos)</option>
 									<option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
 									<option value="Cerimônia religiosa">Cerimônia Religiosa</option>
