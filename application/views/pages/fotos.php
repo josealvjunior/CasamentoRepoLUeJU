@@ -61,6 +61,42 @@
 									<h5>Noivado - 2015</h5>
 								</a>
 							</div>
+                            <div class="item">
+                                <img src="images/gallery/magnatas_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/magnatas_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Magnatas do samba 2016</h5>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery/savethedate1_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/savethedate1_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Save The Date - Cabeleira do Zezé</h5>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery/niverLu 2016_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/niverLu 2016_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Niver da Lu 2016</h5>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery/chaDePanela_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/chaDePanela_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Chá de Panela</h5>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery/savethedate2_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/savethedate2_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Save The Date - Nós e os Cachorros</h5>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery/savethedate3_thumb.jpg" alt="gallery image">
+                                <a href="images/gallery/savethedate3_gallery.jpg" class="caption gallery-popup">
+                                    <h5>Save The Date - Além do horizonte</h5>
+                                </a>
+                            </div>
 	 					</div>
 	 					<!-- /.photo-gallery end -->
 	 				</div>
