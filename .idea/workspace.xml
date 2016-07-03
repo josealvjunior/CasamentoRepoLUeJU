@@ -25,8 +25,8 @@
       <file leaf-file-name="rsvp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/pages/rsvp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+            <state relative-caret-position="357">
+              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -257,12 +257,12 @@
       <workItem from="1465612950837" duration="789000" />
       <workItem from="1465673150542" duration="830000" />
       <workItem from="1467487973626" duration="8962000" />
-      <workItem from="1467569155526" duration="2672000" />
+      <workItem from="1467569155526" duration="3285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29580000" />
+    <option name="totallyTimeSpent" value="30193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -674,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/rsvp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        <state relative-caret-position="357">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
           <folding />
         </state>
       </provider>
