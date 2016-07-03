@@ -5,7 +5,7 @@
  					<div class="col-sm-12 text-center">
  						<div class="heading wow animated fadeInUp">
 							<h3>Nossos padrinhos</h3>
-							<p>Após um árduo processo de seleção para escolher os melhores de Havard, selecionamos os melhores dos melhores
+							<p>Após um árduo processo de seleção para escolher os melhores de Harvard, selecionamos os melhores dos melhores
 								cavaleiros Jedi. Brincadeiras a parte, são pessoas muito queridas que queremos ao nosso lado no
 							momento de dizer o sim.</p>
 						</div>

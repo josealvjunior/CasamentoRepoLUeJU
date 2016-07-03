@@ -24,9 +24,9 @@
 			<div class="col-sm-12 text-center">
 				<div class="heading wow animated fadeInUp">
 					<h3>RSVP</h3>
-					<p>Sua presença é muito importante, por favor confirme ela o quanto antes.
-						<br> Caso haja mais convidados em sua família aproveite e confirme a presença deles.
-						<br> Confirme o quanto antes, pois as mesas serão reservadas
+					<p>Confirme presença o quanto antes, pois as mesas serão reservadas.
+						<br> É só preencher os campos abairo, selecionar a ocasião em que comparecerá e clicar em confirmar.
+                        <br>Caso haja mais convidados em sua família aproveite e confirme a presença deles.
 					</p>
 				</div>
 				<!-- /.heading end -->
@@ -59,35 +59,38 @@
 			</div>
 			<div class="col-sm-9">
 				<div class="contact-block">
-					<h5>Confirmação de presença</h5>
                     <?php echo validation_errors(); ?>
 					<?php echo form_open('rsvp/inserir', 'id="form-rsvp"'); ?>
 					<!--<form class="contact_form" role="form" action="#"> -->
 					<div class="row">
+                        <div class="col-sm-12" align="center">
+                            <h5>Confirmação de presença</h5>
+                        </div>
 						<div class="col-sm-6">
-							<div class="form-group">
+							<div class="form-group" class="col-sm-4">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome e sobrenome" required="required">
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados confirmados.">
 							</div>
-							<div class="form-group">
-								<select name="eventAttending" id="eventAttending" tabindex="1" required="required">
-									<option value="">Qual ocasiação irei(iremos)</option>
-									<option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
-									<option value="Cerimônia religiosa">Cerimônia Religiosa</option>
-								</select>
-							</div>
 						</div>
-
 						<div class="col-sm-6">
+                            <div class="form-group">
+                                <select name="eventAttending" id="eventAttending" tabindex="1" required="required">
+                                    <option value="">Qual ocasião irei(iremos)</option>
+                                    <option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
+                                    <option value="Cerimônia religiosa">Cerimônia Religiosa</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Seu email..." required="required">
                             </div>
-							<div class="form-group">
-								<input type="submit" name="submit" class="btn default-btn btn-block" value="Confirmar">
-							</div>
 						</div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn default-btn btn-block" value="Confirmar">
+                            </div>
+                        </div>
 						<div class="col-sm-12">
 							<p class="contact-success">Sua menssagem foi enviada com sucesso.<p>
 							<p class="contact-error">Error ! Por favor tente novamente.</p>
