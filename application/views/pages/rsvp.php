@@ -76,8 +76,8 @@
 						</div>
 						<div class="col-sm-6">
                             <div class="form-group">
-                                <select name="eventAttending" id="eventAttending" tabindex="1" required="required">
-                                    <option value="">Qual ocasião irei(iremos)</option>
+                                <select  class="form-control" required aria-required="true" name="eventAttending" id="eventAttending">
+                                    <option value="" disabled selected hidden>Qual ocasião irei(iremos)</option>
                                     <option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
                                     <option value="Cerimônia religiosa">Cerimônia Religiosa</option>
                                 </select>
