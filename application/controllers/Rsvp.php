@@ -45,16 +45,30 @@ class Rsvp extends CI_Controller {
             Luana & Juninho
             */
 
-            $this->email->message
-            (
-                'Ola '. $data['name'].'! Tudo bem?<br />
-                <p>Muito obrigado por confirmar a presença de '. $data['numpessoas'].' em nosso casamento!<br /> 
+            if(!empty($data['numpessoas'])){
+                $this->email->message(
+                    'Ola '. $data['name'].'! Tudo bem?<br />
+                <p>Muito obrigado por confirmar sua presença e de '. $data['numpessoas'].' em nosso casamento!<br /> 
                 Não se esqueça da data e horário:<br />
                 A cerimônia será dia 13/08/2016 as 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
+                ***Haverá conferênicia nominal na portaria então leve um documento de identidade!!!****<br />
                 Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
                 Abraços!<br /> 
                 Luana & Juninho.</p>'
-            );
+                );
+            }else {
+                $this->email->message
+                (                    'Ola '. $data['name'].'! Tudo bem?<br />
+                <p>Muito obrigado por confirmar sua presença em nosso casamento!<br /> 
+                Não se esqueça da data e horário:<br />
+                A cerimônia será dia 13/08/2016 as 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
+                <b>***Haverá conferênicia nominal na portaria então leve um documento de identidade!!!****</b><br />
+                Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
+                Abraços!<br /> 
+                Luana & Juninho.</p>'
+                );
+
+            }
             if ($this->email->send())
                 echo "Mail Sent!";
             else
