@@ -6,7 +6,7 @@
  						<div class="heading wow animated fadeInUp">
 							<h3>Deixe aqui sua mensagem!!!</h3>
 							<p>Seu recado vai ficar registrado aqui em nosso site e desde já agradecemos por essa mensagem de carinho.
-								<br>Estamos muito felizes por compartilhar ester momento com vocês!</p>
+								<br>Estamos muito felizes por compartilhar este momento com vocês!</p>
 						</div>
  					</div>
 	 			</div>
