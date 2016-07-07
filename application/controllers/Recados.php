@@ -40,7 +40,7 @@ class Recados extends CI_Controller {
             $data['nome'] = $this->input->post('name');
             $data['email'] = $this->input->post('email');
             $data['recado'] = $this->input->post('message');
-            $data['data_criacao'] = date("Y-m-d");
+            $data['dt_criacao'] = date("Y-m-d");
             //inserir data atual tamb�m....
 
             //enviar email de aviso//

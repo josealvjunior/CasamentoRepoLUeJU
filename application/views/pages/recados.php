@@ -27,15 +27,16 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<textarea class="form-control" name="message" id="message" rows="4" placeholder="Mensagem..." required="required">
-									</textarea>
-								</div>
-								<div class="form-group">
-									<input type="submit" name="submit" class="btn default-btn btn-block" value="Enviar recado">
-								</div>
-							</div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" placeholder="Deixe seu recado..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn default-btn btn-block" value="Enviar recado">
+                                </div>
+                            </div>
 							<div class="col-sm-12">
 								<p class="contact-success">Sua menssagem foi enviada com sucesso.<p>
 								<p class="contact-error">Error ! Por favor tente novamente.</p>
