@@ -92,9 +92,9 @@
                             </div>
                         </div>
 						<div class="col-sm-12">
-							<p class="contact-success">Sua menssagem foi enviada com sucesso.<p>
-							<p class="contact-error">Error ! Por favor tente novamente.</p>
-						</div>
+                            <h3></h3>
+
+                        </div>
 					</div>
 					<!-- </form> -->
 					<?php echo form_close(); ?>

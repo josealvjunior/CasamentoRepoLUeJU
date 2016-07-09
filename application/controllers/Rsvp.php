@@ -5,14 +5,15 @@ class Rsvp extends CI_Controller {
         /*
         /* Carrega a biblioteca do CodeIgniter respons�vel pela valida��o dos formul�rios */
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
+        $this->load->library(array('form_validation','session','mensagem'));
+
         $this->load->model('rsvp_model');
         /* Define as tags onde a mensagem de erro ser� exibida na p�gina */
         //$this->form_validation->set_error_delimiters('<span>', '</span>');
 
         /* Define as regras para valida��o */
         $this->form_validation->set_rules('name', 'name', 'required|max_length[100]');
-        //$this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
+        $this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
         $this->form_validation->set_rules('eventAttending', 'eventAttending','required');
         $this->form_validation->set_rules('email', 'email');
 
@@ -23,6 +24,9 @@ class Rsvp extends CI_Controller {
             /* Sen�o, caso sucesso na valida��o... */
 
         } else {
+
+            echo $this->mensagem->exibir();
+
             /* Recebe os dados do formul�rio (vis�o) */
             $data['name'] = $this->input->post('name');
             $data['numpessoas'] = $this->input->post('numpessoas');
@@ -94,15 +98,17 @@ class Rsvp extends CI_Controller {
 
                 }
             }
-            if ($this->email->send())
+            if ($this->email->send()){
                 echo "Mail Sent!";
-            else
+            }
+            else{
                 echo $this->email->print_debugger();
-
+            }
 
 
             /* Chama a fun��o inserir do modelo */
 
+            $this->session->set_flashdata('sucesso','Sua Reserva foi cadastrada com sucesso!');
             $this->rsvp_model->inserir($data);
             //redirect('#contact');
 

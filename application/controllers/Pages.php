@@ -16,11 +16,16 @@ class Pages extends CI_Controller {
                 show_404();
              }
 
-             /* Carrega a biblioteca do CodeIgniter responsável pela validação dos formulários */
-                $this->load->library('form_validation');
+             /* Carrega a biblioteca do CodeIgniter responsï¿½vel pela validaï¿½ï¿½o dos formulï¿½rios */
+                $this->load->library(array('form_validation', 'session'));
+                $this->load->helper('html');
                 $data['title'] = ucfirst($page); // Capitalize the first letter
                 $this->load->view('templates/header', $data);
                 $this->load->view('pages/'.$page, $data);
+
+                if(!empty($this->session->flashdata())){
+                    echo heading($this->session->flashdata('sucesso'), 3, 'class="pink"');
+                }
                 $this->load->view('pages/casal.php', $data);
                 $this->load->view('pages/historia.php', $data);
                 $this->load->view('pages/padrinhos.php', $data);
