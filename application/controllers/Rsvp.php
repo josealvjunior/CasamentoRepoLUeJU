@@ -8,9 +8,8 @@ class Rsvp extends CI_Controller {
         $this->load->library(array('form_validation','session'));
 
         $this->load->model('rsvp_model');
-        /* Define as tags onde a mensagem de erro ser� exibida na p�gina */
-        //$this->form_validation->set_error_delimiters('<span>', '</span>');
 
+        $this->form_validation->set_error_delimiters('<span>', '</span>');
         /* Define as regras para valida��o */
         $this->form_validation->set_rules('name', 'name', 'required|max_length[100]');
         $this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
@@ -24,8 +23,6 @@ class Rsvp extends CI_Controller {
             /* Sen�o, caso sucesso na valida��o... */
 
         } else {
-
-            echo $this->mensagem->exibir();
 
             /* Recebe os dados do formul�rio (vis�o) */
             $data['name'] = $this->input->post('name');
