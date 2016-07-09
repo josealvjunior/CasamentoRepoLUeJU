@@ -5,7 +5,7 @@ class Rsvp extends CI_Controller {
         /*
         /* Carrega a biblioteca do CodeIgniter respons�vel pela valida��o dos formul�rios */
         $this->load->helper(array('form', 'url'));
-        $this->load->library(array('form_validation','session','mensagem'));
+        $this->load->library(array('form_validation','session'));
 
         $this->load->model('rsvp_model');
         /* Define as tags onde a mensagem de erro ser� exibida na p�gina */
