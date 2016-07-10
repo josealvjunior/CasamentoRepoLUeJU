@@ -26,7 +26,6 @@
 					<h3>RSVP</h3>
 					<p>Confirme presença o quanto antes, pois as mesas serão reservadas.
 						<br> É só preencher os campos abaixo, selecionar a ocasião em que comparecerá e clicar em confirmar.
-                        <br>Caso haja mais convidados em sua família aproveite e confirme a presença deles.
 					</p>
 				</div>
 				<!-- /.heading end -->
