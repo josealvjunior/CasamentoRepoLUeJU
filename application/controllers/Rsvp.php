@@ -12,7 +12,7 @@ class Rsvp extends CI_Controller {
         $this->form_validation->set_error_delimiters('<span>', '</span>');
         /* Define as regras para valida��o */
         $this->form_validation->set_rules('name', 'name', 'required|max_length[100]');
-        $this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
+        //$this->form_validation->set_rules('numpessoas', 'numpessoas', 'required');
         $this->form_validation->set_rules('eventAttending', 'eventAttending','required');
         $this->form_validation->set_rules('email', 'email');
 
