@@ -20,7 +20,7 @@ class Recados extends CI_Controller {
     {
         /*
         /* Carrega a biblioteca do CodeIgniter respons�vel pela valida��o dos formul�rios */
-        $this->load->library('form_validation');
+        $this->load->library(array('form_validation','session'));
         $this->load->model('recados_model');
         /* Define as tags onde a mensagem de erro ser� exibida na p�gina */
         $this->form_validation->set_error_delimiters('<span>', '</span>');
@@ -71,7 +71,7 @@ class Recados extends CI_Controller {
 
 
             /* Chama a fun��o inserir do modelo */
-
+            $this->session->set_flashdata('sucesso','Seu recado foi registrado com sucesso!');
             $this->recados_model->inserir($data);
             //redirect('#contact');
 

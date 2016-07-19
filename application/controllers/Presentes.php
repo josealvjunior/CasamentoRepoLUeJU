@@ -69,7 +69,7 @@ class Presentes extends CI_Controller {
     {
         /*
         /* Carrega a biblioteca do CodeIgniter respons�vel pela valida��o dos formul�rios */
-        $this->load->library('form_validation', 'email');
+        $this->load->library(array('form_validation', 'email','session'));
         $this->load->model('presentes_model');
 
         /* Define as tags onde a mensagem de erro ser� exibida na p�gina */
@@ -98,6 +98,7 @@ class Presentes extends CI_Controller {
             $this->email->send();
             $this->presentes_model->inserir($data);
             //redirect('#contact');
+            $this->session->set_flashdata('sucesso','Seu Presente foi registrado com sucesso!');
 
             redirect('','#gift');
         }
