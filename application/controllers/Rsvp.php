@@ -18,7 +18,7 @@ class Rsvp extends CI_Controller {
 
         /* Executa a valida��o e caso houver erro... */
         if ($this->form_validation->run() == FALSE) {
-                    /* Chama a fun��o index do controlador */
+            /* Chama a fun��o index do controlador */
             $this->load->view('pages/rsvp.php');
             /* Sen�o, caso sucesso na valida��o... */
 
@@ -46,12 +46,12 @@ class Rsvp extends CI_Controller {
             Luana & Juninho
             */
 
-            if($data['eventAttending'] =='Cerimônia e Recepção')
+            if($data['eventAttending'] =='Cerimônia e recepcao')
             {
                 if(!empty($data['numpessoas'])){
                     $this->email->message(
                         'Ola '. $data['name'].'! Tudo bem?<br />
-                    <p>Muito obrigado por confirmar sua presença e de '. $data['numpessoas'].' na '. $data['eventAttending'].'!<br /> 
+                    <p>Muito obrigado por confirmar sua presença e de '. $data['numpessoas'].' na cerimônia e recepção!<br /> 
                     Não se esqueça da data e horário:<br />
                     A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
                     ***Haverá conferência nominal na portaria da recepção, então leve um documento de identidade!!!****<br />
@@ -62,7 +62,7 @@ class Rsvp extends CI_Controller {
                 }else {
                     $this->email->message(
                         'Ola '. $data['name'].'! Tudo bem?<br />
-                    <p>Muito obrigado por confirmar sua presença na '. $data['eventAttending'].'!<br /> 
+                    <p>Muito obrigado por confirmar sua presença na cerimônia e recepção!<br /> 
                     Não se esqueça da data e horário:<br />
                     A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
                     Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
@@ -71,30 +71,53 @@ class Rsvp extends CI_Controller {
                     );
 
                 }
-            } else {
-                if(!empty($data['numpessoas'])){
-                    $this->email->message(
-                        'Ola '. $data['name'].'! Tudo bem?<br />
-                    <p>Muito obrigado por confirmar sua presença e de '. $data['numpessoas'].' na '. $data['eventAttending'].'!<br /> 
-                    Não se esqueça da data e horário:<br />
-                    A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
-                    Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
-                    Abraços!<br /> 
-                    Luana & Juninho.</p>'
-                    );
-                }else {
-                    $this->email->message(
-                        'Ola '. $data['name'].'! Tudo bem?<br />
-                    <p>Muito obrigado por confirmar sua presença em nosso casamento!<br /> 
-                    Não se esqueça da data e horário:<br />
-                    A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
-                    Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
-                    Abraços!<br /> 
-                    Luana & Juninho.</p>'
-                    );
+            }else {
 
+                if ($data['eventAttending'] == 'Cerimônia religiosa') {
+                    if (!empty($data['numpessoas'])) {
+                        $this->email->message(
+                            'Ola ' . $data['name'] . '! Tudo bem?<br />
+                        <p>Muito obrigado por confirmar sua presença e de ' . $data['numpessoas'] . ' na cerimônia religiosa!<br /> 
+                        Não se esqueça da data e horário:<br />
+                        A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
+                        Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
+                        Abraços!<br /> 
+                        Luana & Juninho.</p>'
+                        );
+                    } else {
+                        $this->email->message(
+                            'Ola ' . $data['name'] . '! Tudo bem?<br />
+                        <p>Muito obrigado por confirmar sua presença na cerimônia religiosa!<br /> 
+                        Não se esqueça da data e horário:<br />
+                        A cerimônia será dia 13/08/2016 às 16h na Paróquia de Santa Efigênia dos Militares - R. Álvares Maciel, 223.<br />
+                        Sua presença é muito importante para nós! Agradecemos o carinho e nos vemos lá!<br /> 
+                        Abraços!<br /> 
+                        Luana & Juninho.</p>'
+                        );
+                    }
+                } else {
+                    if($data['eventAttending'] =='Não')
+                    {
+                        if(!empty($data['numpessoas'])){
+                            $this->email->message(
+                                'Ola '. $data['name'].'! Tudo bem?<br />
+                            <p>Que pena que você e '. $data['numpessoas'].' não poderão estar conosco, mas compreendemos!<br /> 
+                            Abraços.<br /> 
+                            Luana & Juninho.</p>'
+                            );
+                        }else {
+                            $this->email->message(
+                                'Ola '. $data['name'].'! Tudo bem?<br />
+                            <p>Que pena que você não poderá estar conosco, mas compreendemos!<br /> 
+                            Abraços.<br /> 
+                            Luana & Juninho.</p>'
+                            );
+                        }
+                    }
                 }
+
             }
+
             if ($this->email->send()){
                 echo "Mail Sent!";
             }

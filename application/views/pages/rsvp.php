@@ -70,15 +70,16 @@
 								<input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome e sobrenome" required="required">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados confirmados.">
+								<input type="text" class="form-control" id="numpessoas" name="numpessoas" placeholder="Digite nome e sobrenome de outros convidados.">
 							</div>
 						</div>
 						<div class="col-sm-6">
                             <div class="form-group">
                                 <select  class="form-control" required aria-required="true" name="eventAttending" id="eventAttending">
-                                    <option value="" disabled selected hidden>Qual ocasião irei(iremos)</option>
-                                    <option value="Cerimônia e Recepção">Cerimônia e Recepção</option>
-                                    <option value="Cerimônia religiosa">Cerimônia Religiosa</option>
+                                    <option value="" disabled selected hidden>Você comparecerá?</option>
+                                    <option value="Cerimônia religiosa">Sim, apenas cerimônia</option>
+                                    <option value="Cerimônia e recepcao">Sim, na cerimônia e recepção</option>
+                                    <option value="Não">Não comparecerei</option>
                                 </select>
                             </div>
                             <div class="form-group">
